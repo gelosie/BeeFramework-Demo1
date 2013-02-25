@@ -1,0 +1,39 @@
+
+PODS:
+- ASIHTTPRequest (1.8.1):
+  - ASIHTTPRequest/ASIWebPageRequest (= 1.8.1)
+  - ASIHTTPRequest/CloudFiles (= 1.8.1)
+  - ASIHTTPRequest/S3 (= 1.8.1)
+  - Reachability
+- ASIHTTPRequest/ASIWebPageRequest (1.8.1):
+  - Reachability
+- ASIHTTPRequest/CloudFiles (1.8.1):
+  - Reachability
+- ASIHTTPRequest/S3 (1.8.1):
+  - Reachability
+- BeeFramework (HEAD based on 0.2.3):
+  - ASIHTTPRequest
+  - FMDB (HEAD)
+  - JSONKit
+  - Reachability
+  - SFHFKeychainUtils
+- FMDB (HEAD based on 2.0)
+- JSONKit (1.5pre)
+- Reachability (3.1.0)
+- SFHFKeychainUtils (0.0.1)
+
+DEPENDENCIES:
+- BeeFramework (HEAD)
+
+SPEC CHECKSUMS:
+  ASIHTTPRequest: e606d2df58b0aace6c1cf1d39a08d3484f91324a
+  ASIHTTPRequest/ASIWebPageRequest: e606d2df58b0aace6c1cf1d39a08d3484f91324a
+  ASIHTTPRequest/CloudFiles: e606d2df58b0aace6c1cf1d39a08d3484f91324a
+  ASIHTTPRequest/S3: e606d2df58b0aace6c1cf1d39a08d3484f91324a
+  BeeFramework: 00007dfbb7643e0e6d5874cabf909f0542f05041
+  FMDB: 77fb1c93b51bbf14d84d49d5374344b7f68c54f1
+  JSONKit: 3d4708953ea7ae399a49777372d8b060a43ddd27
+  Reachability: 1c8584c5f26fa776695efef95caaa50402c94cfb
+  SFHFKeychainUtils: b76aa7a39f07eb6ff97ab94b582e789f50d7ec5a
+
+COCOAPODS: 0.16.1
