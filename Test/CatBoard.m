@@ -8,6 +8,7 @@
 
 #import "CatBoard.h"
 #import "Cat1Board.h"
+#import "TabBoard.h"
 
 @interface CatBoard ()
 
@@ -67,6 +68,7 @@ DEF_SIGNAL(GO)
 	{
 		Cat1Board * board = [[Cat1Board alloc] init];
 		[self.stack pushBoard:board animated:YES];
+        [[NSNotificationCenter defaultCenter]postNotificationName:HideBarNotification object:self userInfo:@{@"hide":[NSNumber numberWithInt:1]}];
 	}
 }
 

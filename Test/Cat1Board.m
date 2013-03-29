@@ -7,7 +7,7 @@
 //
 
 #import "Cat1Board.h"
-
+#import "TabBoard.h"
 @interface Cat1Board ()
 
 @end
@@ -43,6 +43,12 @@
 	else if ( [signal is:BeeUIBoard.LAYOUT_VIEWS] )
 	{
 	}
+    
+    else if ( [signal is:BeeUIBoard.DID_DISAPPEAR] )
+	{
+        [[NSNotificationCenter defaultCenter]postNotificationName:HideBarNotification object:self userInfo:@{@"hide":[NSNumber numberWithInt:0]}];
+	}
+    
 }
 
 

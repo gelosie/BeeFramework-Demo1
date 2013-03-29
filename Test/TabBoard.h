@@ -8,6 +8,8 @@
 
 #import "Bee_UIBoard.h"
 
+extern NSString *HideBarNotification;
+
 @interface TabBoard : BeeUIStackGroup
 {
     BeeUIStack *dog;

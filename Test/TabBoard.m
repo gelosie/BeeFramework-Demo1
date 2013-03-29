@@ -11,6 +11,8 @@
 #import "BirdBoard.h"
 #import "CatBoard.h"
 
+NSString *HideBarNotification = @"HideBarNotification";
+
 @interface TabBoard ()
 
 @end
@@ -74,6 +76,26 @@
         frame.origin.y = self.view.bounds.size.height - 44.0f;
         tabBar.frame = frame;
 	}
+    else if ( [signal is:BeeUIBoard.WILL_APPEAR] )
+    {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beeHideBar:) name:HideBarNotification object:nil];
+    }else if ( [signal is:BeeUIBoard.DID_DISAPPEAR] )
+	{
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+    }
+}
+
+- (void)beeHideBar:(NSNotification*) notification
+{
+    NSDictionary *userInfo = notification.userInfo;
+    int hide = [(NSNumber *)[userInfo objectForKey:@"hide"] intValue];
+    // HITE: FOR TEST, JUST HIDEEN. YOU CAN ADD ANIMATE HERE
+    if (hide == 0) {
+        self.tabBar.hidden = NO;
+    }else{
+        self.tabBar.hidden = YES;
+    }
+    
 }
 
 - (void)handleBeeUITabBar:(BeeUISignal *)signal
